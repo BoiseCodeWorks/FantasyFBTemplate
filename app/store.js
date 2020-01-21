@@ -46,26 +46,6 @@ class Store {
   get State() {
     return _state;
   }
-  //NOTE itterates over array of players to add team name to array and return it.
-  get TeamChoices() {
-    let teams = []
-    _state.allPlayers.forEach(p => {
-      if (!teams.includes(p.team)) {
-        teams.push(p.team)
-      }
-    })
-    return teams
-  }
-  //NOTE itterates over array of players to add position choice to array and return it.
-  get PositionChoices() {
-    let positions = []
-    _state.allPlayers.forEach(p => {
-      if (!positions.includes(p.position)) {
-        positions.push(p.position)
-      }
-    })
-    return positions
-  }
   /**
    * Takes in a property to observe, and a function to run when it changes
    * @param {string} prop
